@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dl5t66yfvgdl"]
+
+[ext_resource type="Script" path="res://game/game_app.gd" id="1_i1dlk"]
+[ext_resource type="PackedScene" uid="uid://l8vwufrxgsr8" path="res://__messing_around/time_go_brr.tscn" id="2_r043y"]
+
+[node name="GameApp" type="Node"]
+process_mode = 1
+script = ExtResource("1_i1dlk")
+
+[node name="TimeGoBrr" parent="." instance=ExtResource("2_r043y")]
+mouse_filter = 2

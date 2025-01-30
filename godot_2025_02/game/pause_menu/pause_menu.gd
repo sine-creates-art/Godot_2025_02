@@ -8,6 +8,7 @@ var _pause_menu_data: PauseMenuData;
 ## onready Variables
 @onready var control: Control = $Control;
 @onready var resume_button: Button = $Control/PauseMenuButtons/Resume;
+@onready var save_button: Button = $Control/PauseMenuButtons/Save;
 @onready var settings_button: Button = $Control/PauseMenuButtons/Settings;
 @onready var main_menu_button: Button = $Control/PauseMenuButtons/MainMenu;
 
@@ -36,6 +37,11 @@ func show() -> void:
 ## Private Methods
 func _process_pause_menu_data() -> void:
 	if _pause_menu_data:
+		Utility.clear_connections(resume_button.button_up);
 		resume_button.button_up.connect(_pause_menu_data.resume_button_callback);
+		Utility.clear_connections(save_button.button_up);
+		save_button.button_up.connect(_pause_menu_data.save_button_callback);
+		Utility.clear_connections(settings_button.button_up);
 		settings_button.button_up.connect(_pause_menu_data.settings_button_callback);
+		Utility.clear_connections(main_menu_button.button_up);
 		main_menu_button.button_up.connect(_pause_menu_data.main_menu_button_callback);

@@ -35,6 +35,11 @@ custom_minimum_size = Vector2(250, 100)
 layout_mode = 2
 text = "RESUME"
 
+[node name="Save" type="Button" parent="Control/PauseMenuButtons"]
+custom_minimum_size = Vector2(250, 100)
+layout_mode = 2
+text = "SAVE"
+
 [node name="Settings" type="Button" parent="Control/PauseMenuButtons"]
 custom_minimum_size = Vector2(250, 100)
 layout_mode = 2

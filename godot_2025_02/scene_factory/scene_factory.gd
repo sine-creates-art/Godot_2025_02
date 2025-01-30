@@ -13,7 +13,7 @@ static func new_main_menu(main_menu_data: MainMenuData) -> MainMenu:
 ## Game
 const game: PackedScene = preload("res://game/game.tscn");
 
-static func new_game(pause_menu_data: PauseMenuData) -> Game:
+static func new_game(pause_menu_data: PauseMenuData, settings: Settings) -> Game:
 	var new_game_instance: Game = game.instantiate();
-	new_game_instance.config(pause_menu_data);
+	new_game_instance.config(pause_menu_data, settings);
 	return new_game_instance;

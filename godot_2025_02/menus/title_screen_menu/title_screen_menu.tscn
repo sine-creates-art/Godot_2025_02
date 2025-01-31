@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://cfx05kegeq64x"]
+[gd_scene load_steps=4 format=3 uid="uid://cfx05kegeq64x"]
 
 [ext_resource type="Script" path="res://menus/title_screen_menu/title_screen_menu.gd" id="1_i4ir4"]
 [ext_resource type="Theme" uid="uid://bg1jxqncw3437" path="res://themes/default_theme.tres" id="2_io26i"]
+[ext_resource type="PackedScene" uid="uid://bbcmixs2q2ii5" path="res://menus/ui_elements/button_with_sfx.tscn" id="3_5bmea"]
 
 [node name="TitleScreenMenu" type="Node"]
 script = ExtResource("1_i4ir4")
@@ -29,23 +30,18 @@ offset_bottom = 50.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Start" type="Button" parent="Control/MainMenuButtons"]
-custom_minimum_size = Vector2(200, 100)
+[node name="Start" parent="Control/MainMenuButtons" instance=ExtResource("3_5bmea")]
 layout_mode = 2
-text = "START"
 
-[node name="Load" type="Button" parent="Control/MainMenuButtons"]
-custom_minimum_size = Vector2(200, 100)
+[node name="Load" parent="Control/MainMenuButtons" instance=ExtResource("3_5bmea")]
 layout_mode = 2
-text = "LOAD"
+text = "LOAD
+"
 
-[node name="Settings" type="Button" parent="Control/MainMenuButtons"]
-custom_minimum_size = Vector2(200, 100)
+[node name="Settings" parent="Control/MainMenuButtons" instance=ExtResource("3_5bmea")]
 layout_mode = 2
 text = "SETTINGS"
 
-[node name="Quit" type="Button" parent="Control/MainMenuButtons"]
-custom_minimum_size = Vector2(200, 100)
+[node name="Quit" parent="Control/MainMenuButtons" instance=ExtResource("3_5bmea")]
 layout_mode = 2
-text = "QUIT
-"
+text = "QUIT"

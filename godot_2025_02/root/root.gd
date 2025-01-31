@@ -11,7 +11,7 @@ enum State {NONE, MAIN_MENU, LOADING, STARTING, RUNNING, SAVING, STOPPING};
 
 
 ## onready Variables
-@onready var active_scene_parent = $ActiveSceneParent;
+@onready var active_scene_parent: Node = $ActiveSceneParent;
 
 
 ## Private Variables

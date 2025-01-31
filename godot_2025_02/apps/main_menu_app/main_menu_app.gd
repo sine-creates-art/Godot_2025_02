@@ -39,6 +39,8 @@ func _process(_delta: float) -> void:
 
 ## Public Methods
 func config(main_menu_data: MainMenuData) -> void:
+	
+	## Main Menu
 	_main_menu_data = main_menu_data;
 	if is_node_ready():
 		_process_main_menu_data();
@@ -61,6 +63,9 @@ func _process_main_menu_data() -> void:
 		var settings_menu_data: SettingsMenuData = SettingsMenuData.new();
 		settings_menu_data.back_button_callback = _settings_back_action;
 		settings_menu.config(settings_menu_data);
+	
+	if Global.audio_manager:
+		Global.audio_manager.play_music(AudioManager.Music.GRAVITY);
 
 func _settings_open_action() -> void:
 	_state = State.SETTINGS;

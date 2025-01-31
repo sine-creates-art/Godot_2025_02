@@ -1,11 +1,21 @@
-[gd_scene load_steps=3 format=3 uid="uid://c0vsg6dqu3pm5"]
+[gd_scene load_steps=4 format=3 uid="uid://c0vsg6dqu3pm5"]
 
 [ext_resource type="Script" path="res://root/root.gd" id="1_ic2yg"]
+[ext_resource type="Script" path="res://global_managers/audio_manager/audio_manager.gd" id="2_65psr"]
 [ext_resource type="Script" path="res://root/root_data.gd" id="2_wmme5"]
 
 [node name="Root" type="Node"]
 process_mode = 3
 script = ExtResource("1_ic2yg")
+
+[node name="AudioManager" type="Node" parent="."]
+script = ExtResource("2_65psr")
+
+[node name="Music_ASP" type="AudioStreamPlayer" parent="AudioManager"]
+bus = &"Music"
+
+[node name="SFX_ASP" type="AudioStreamPlayer" parent="AudioManager"]
+bus = &"SFX"
 
 [node name="RootData" type="Node" parent="."]
 script = ExtResource("2_wmme5")

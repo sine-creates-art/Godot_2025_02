@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://cug0k1y53x1ga"]
+[gd_scene load_steps=4 format=3 uid="uid://cug0k1y53x1ga"]
 
 [ext_resource type="Script" path="res://menus/pause_menu/pause_menu.gd" id="1_ofb6n"]
 [ext_resource type="Theme" uid="uid://bg1jxqncw3437" path="res://themes/default_theme.tres" id="2_2t8gf"]
+[ext_resource type="PackedScene" uid="uid://bbcmixs2q2ii5" path="res://menus/ui_elements/button_with_sfx.tscn" id="3_a5i24"]
 
 [node name="PauseMenu" type="Node"]
 script = ExtResource("1_ofb6n")
@@ -29,22 +30,18 @@ offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Resume" type="Button" parent="Control/PauseMenuButtons"]
-custom_minimum_size = Vector2(250, 100)
+[node name="Resume" parent="Control/PauseMenuButtons" instance=ExtResource("3_a5i24")]
 layout_mode = 2
 text = "RESUME"
 
-[node name="Save" type="Button" parent="Control/PauseMenuButtons"]
-custom_minimum_size = Vector2(250, 100)
+[node name="Save" parent="Control/PauseMenuButtons" instance=ExtResource("3_a5i24")]
 layout_mode = 2
 text = "SAVE"
 
-[node name="Settings" type="Button" parent="Control/PauseMenuButtons"]
-custom_minimum_size = Vector2(250, 100)
+[node name="Settings" parent="Control/PauseMenuButtons" instance=ExtResource("3_a5i24")]
 layout_mode = 2
 text = "SETTINGS"
 
-[node name="MainMenu" type="Button" parent="Control/PauseMenuButtons"]
-custom_minimum_size = Vector2(250, 100)
+[node name="MainMenu" parent="Control/PauseMenuButtons" instance=ExtResource("3_a5i24")]
 layout_mode = 2
 text = "MAIN MENU"

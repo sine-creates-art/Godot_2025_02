@@ -14,6 +14,10 @@ config/name="Godot_2025_02"
 run/main_scene="res://root/root.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 
+[audio]
+
+buses/default_bus_layout="res://global_managers/audio_manager/default_bus_layout.tres"
+
 [display]
 
 window/size/viewport_width=1920

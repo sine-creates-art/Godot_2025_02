@@ -72,6 +72,9 @@ func unpause_game() -> void:
 func _process_data() -> void:
 	_process_input_manager_data();
 	_process_pause_menu_data();
+	
+	if Global.audio_manager:
+		Global.audio_manager.play_music(AudioManager.Music.PEDAL_TO_THE_MEDAL);
 
 func _process_input_manager_data() -> void:
 	if _input_manager_data:

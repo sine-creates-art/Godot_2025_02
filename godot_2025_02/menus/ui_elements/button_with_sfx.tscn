@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bbcmixs2q2ii5"]
+
+[ext_resource type="Script" path="res://menus/ui_elements/button_with_sfx.gd" id="1_j68vc"]
+
+[node name="ButtonWithSFX" type="Button"]
+offset_right = 200.0
+offset_bottom = 100.0
+text = "START"
+script = ExtResource("1_j68vc")

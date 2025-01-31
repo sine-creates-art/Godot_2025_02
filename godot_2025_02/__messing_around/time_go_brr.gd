@@ -9,9 +9,16 @@ var duration: float = 0.0;
 
 
 ## Built-In Virtual Methods
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _ready() -> void:
+	_update_label()
+
 func _process(_delta: float) -> void:
 	duration += _delta;
+	_update_label()
+
+
+## Private Methods
+func _update_label() -> void:
 	var seconds: int = floor(int(duration));
 	var remainder: int = floor(100.0*(duration - float(seconds)));
 	if (remainder < 10):

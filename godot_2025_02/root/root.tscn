@@ -1,12 +1,13 @@
 [gd_scene load_steps=3 format=3 uid="uid://c0vsg6dqu3pm5"]
 
 [ext_resource type="Script" path="res://root/root.gd" id="1_ic2yg"]
-[ext_resource type="PackedScene" uid="uid://dwa1isym1xkjy" path="res://settings/settings.tscn" id="2_xca7f"]
+[ext_resource type="Script" path="res://root/root_data.gd" id="2_wmme5"]
 
 [node name="Root" type="Node"]
 process_mode = 3
 script = ExtResource("1_ic2yg")
 
-[node name="ActiveSceneParent" type="Node" parent="."]
+[node name="RootData" type="Node" parent="."]
+script = ExtResource("2_wmme5")
 
-[node name="Settings" parent="." instance=ExtResource("2_xca7f")]
+[node name="ActiveSceneParent" type="Node" parent="."]

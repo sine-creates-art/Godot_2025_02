@@ -1,4 +1,4 @@
-class_name MainMenu extends Node
+class_name TitleScreenMenu extends Node
 
 
 ## Private Variables

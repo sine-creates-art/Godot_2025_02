@@ -1,8 +1,8 @@
-class_name Settings extends Node
+class_name SettingsMenu extends Node
 
 
 ## Private Variables
-var _settings_data: SettingsData;
+var _settings_menu_data: SettingsMenuData;
 
 
 ## onready Variables
@@ -19,8 +19,8 @@ func _process(_delta: float) -> void:
 
 
 ## Public Methods
-func config(settings_data: SettingsData) -> void:
-	_settings_data = settings_data;
+func config(settings_menu_data: SettingsMenuData) -> void:
+	_settings_menu_data = settings_menu_data;
 	if is_node_ready():
 		_process_settings_data();
 
@@ -33,6 +33,6 @@ func show() -> void:
 
 ## Private Methods
 func _process_settings_data() -> void:
-	if _settings_data:
+	if _settings_menu_data:
 		Utility.clear_connections(back_button.button_up);
-		back_button.button_up.connect(_settings_data.back_button_callback);
+		back_button.button_up.connect(_settings_menu_data.back_button_callback);

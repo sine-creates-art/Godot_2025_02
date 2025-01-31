@@ -1,10 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://dwa1isym1xkjy"]
 
-[ext_resource type="Script" path="res://settings/settings.gd" id="1_af2wl"]
-[ext_resource type="Theme" uid="uid://bg1jxqncw3437" path="res://themes/default_theme.tres" id="2_ghdol"]
+[ext_resource type="Script" path="res://menus/settings_menu/settings_menu.gd" id="1_su0bi"]
+[ext_resource type="Theme" uid="uid://bg1jxqncw3437" path="res://themes/default_theme.tres" id="2_j7qn1"]
 
-[node name="Settings" type="Node"]
-script = ExtResource("1_af2wl")
+[node name="SettingsMenu" type="Node"]
+script = ExtResource("1_su0bi")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -13,7 +13,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("2_ghdol")
+theme = ExtResource("2_j7qn1")
 
 [node name="Panel" type="Panel" parent="Control"]
 layout_mode = 1

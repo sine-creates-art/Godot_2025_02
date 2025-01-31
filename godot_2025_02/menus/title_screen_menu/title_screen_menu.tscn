@@ -1,10 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://cj5cls7ji8twd"]
+[gd_scene load_steps=3 format=3 uid="uid://cfx05kegeq64x"]
 
-[ext_resource type="Script" path="res://main_menu/main_menu.gd" id="1_ugkxk"]
-[ext_resource type="Theme" uid="uid://bg1jxqncw3437" path="res://themes/default_theme.tres" id="2_i0774"]
+[ext_resource type="Script" path="res://menus/title_screen_menu/title_screen_menu.gd" id="1_i4ir4"]
+[ext_resource type="Theme" uid="uid://bg1jxqncw3437" path="res://themes/default_theme.tres" id="2_io26i"]
 
-[node name="MainMenu" type="Node"]
-script = ExtResource("1_ugkxk")
+[node name="TitleScreenMenu" type="Node"]
+script = ExtResource("1_i4ir4")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -13,7 +13,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("2_i0774")
+theme = ExtResource("2_io26i")
 
 [node name="MainMenuButtons" type="VBoxContainer" parent="Control"]
 layout_mode = 1

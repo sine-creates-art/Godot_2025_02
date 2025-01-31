@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://cph7m3p54vxsc"]
+
+[ext_resource type="Script" path="res://game/paused_game/paused_game.gd" id="1_8ai6p"]
+[ext_resource type="PackedScene" uid="uid://dwa1isym1xkjy" path="res://menus/settings_menu/settings_menu.tscn" id="2_65qld"]
+[ext_resource type="PackedScene" uid="uid://cug0k1y53x1ga" path="res://menus/pause_menu/pause_menu.tscn" id="3_3pacr"]
+
+[node name="PausedGame" type="Node"]
+process_mode = 2
+script = ExtResource("1_8ai6p")
+
+[node name="SettingsMenu" parent="." instance=ExtResource("2_65qld")]
+
+[node name="PauseMenu" parent="." instance=ExtResource("3_3pacr")]

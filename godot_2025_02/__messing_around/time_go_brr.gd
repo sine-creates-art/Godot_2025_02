@@ -1,13 +1,20 @@
 extends Control
 
+
+## Private Variables
+var duration: float = 0.0;
+
+## onready Variables
 @onready var label: Label = $Label;
-var initial_time: int;
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	initial_time = Time.get_ticks_msec();
 
 
+## Built-In Virtual Methods
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	label.text = str(Time.get_ticks_msec() - initial_time);
+	duration += _delta;
+	var seconds: int = floor(int(duration));
+	var remainder: int = floor(100.0*(duration - float(seconds)));
+	if (remainder < 10):
+		label.text = str(seconds) + ":0" + str(remainder);
+	else:
+		label.text = str(seconds) + ":" + str(remainder);

@@ -1,4 +1,4 @@
-class_name Game extends Node
+class_name GameApp extends Node
 
 
 ## Signals
@@ -19,22 +19,21 @@ var _state: State = State.NONE:
 		match _state:
 			State.RUNNING:
 				get_tree().paused = false;
-				pause_menu.hide();
+				paused_game.hide();
 				game_paused.emit();
 			State.PAUSED:
 				get_tree().paused = true;
-				pause_menu.show();
+				paused_game.show();
 				game_unpaused.emit();
 
 var _input_manager_data: InputManagerData;
 var _pause_menu_data: PauseMenuData;
-var _settings: Settings;
 
 
 ## onready Variables
 @onready var input_manager: InputManager = $InputManager;
-@onready var pause_menu: PauseMenu = $PauseMenu;
-@onready var game_app: GameApp = $GameApp;
+@onready var paused_game: PausedGame = $PausedGame;
+@onready var live_game: LiveGame = $LiveGame;
 
 
 ## Built-In Virtual Methods
@@ -47,7 +46,7 @@ func _process(_delta: float) -> void:
 
 
 ## Public Methods
-func config(pause_menu_data: PauseMenuData, settings: Settings) -> void:
+func config(pause_menu_data: PauseMenuData) -> void:
 	# Input Manager
 	_input_manager_data = InputManagerData.new();
 	_input_manager_data.pause_action_callback = pause_game;
@@ -55,14 +54,7 @@ func config(pause_menu_data: PauseMenuData, settings: Settings) -> void:
 	
 	# Pause Menu
 	pause_menu_data.resume_button_callback = unpause_game;
-	pause_menu_data.settings_button_callback = _settings_open_action;
 	_pause_menu_data = pause_menu_data;
-	
-	# Settings
-	_settings = settings;
-	var settings_data = SettingsData.new();
-	settings_data.back_button_callback = _settings_back_action;
-	_settings.config(settings_data);
 	
 	if is_node_ready():
 		_process_data();
@@ -87,12 +79,4 @@ func _process_input_manager_data() -> void:
 
 func _process_pause_menu_data() -> void:
 	if _pause_menu_data:
-		pause_menu.config(_pause_menu_data);
-
-func _settings_open_action() -> void:
-	pause_menu.hide();
-	_settings.show();
-
-func _settings_back_action() -> void:
-	_settings.hide();
-	pause_menu.show();
+		paused_game.config(_pause_menu_data);

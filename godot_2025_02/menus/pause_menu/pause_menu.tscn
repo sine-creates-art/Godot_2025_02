@@ -1,11 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://cph7m3p54vxsc"]
+[gd_scene load_steps=3 format=3 uid="uid://cug0k1y53x1ga"]
 
-[ext_resource type="Script" path="res://game/pause_menu/pause_menu.gd" id="1_8ai6p"]
-[ext_resource type="Theme" uid="uid://bg1jxqncw3437" path="res://themes/default_theme.tres" id="2_2g4kp"]
+[ext_resource type="Script" path="res://menus/pause_menu/pause_menu.gd" id="1_ofb6n"]
+[ext_resource type="Theme" uid="uid://bg1jxqncw3437" path="res://themes/default_theme.tres" id="2_2t8gf"]
 
 [node name="PauseMenu" type="Node"]
-process_mode = 2
-script = ExtResource("1_8ai6p")
+script = ExtResource("1_ofb6n")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -14,7 +13,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("2_2g4kp")
+theme = ExtResource("2_2t8gf")
 
 [node name="PauseMenuButtons" type="VBoxContainer" parent="Control"]
 layout_mode = 1

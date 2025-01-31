@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://n2iq20xk4h0c"]
+
+[ext_resource type="Script" path="res://apps/game_app/game_app.gd" id="1_i1dlk"]
+[ext_resource type="Script" path="res://global_managers/input_manager/input_manager.gd" id="2_1en4e"]
+[ext_resource type="PackedScene" uid="uid://dl5t66yfvgdl" path="res://game/live_game/live_game.tscn" id="3_dicmp"]
+[ext_resource type="PackedScene" uid="uid://cph7m3p54vxsc" path="res://game/paused_game/paused_game.tscn" id="4_p0k74"]
+
+[node name="GameApp" type="Node"]
+process_mode = 3
+script = ExtResource("1_i1dlk")
+
+[node name="GameData" type="Node" parent="."]
+
+[node name="InputManager" type="Node" parent="."]
+script = ExtResource("2_1en4e")
+
+[node name="LiveGame" parent="." instance=ExtResource("3_dicmp")]
+
+[node name="PausedGame" parent="." instance=ExtResource("4_p0k74")]

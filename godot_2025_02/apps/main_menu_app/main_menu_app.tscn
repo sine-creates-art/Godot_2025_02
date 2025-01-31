@@ -1,0 +1,12 @@
+[gd_scene load_steps=4 format=3 uid="uid://cj5cls7ji8twd"]
+
+[ext_resource type="Script" path="res://apps/main_menu_app/main_menu_app.gd" id="1_a8pey"]
+[ext_resource type="PackedScene" uid="uid://dwa1isym1xkjy" path="res://menus/settings_menu/settings_menu.tscn" id="2_7f6ov"]
+[ext_resource type="PackedScene" uid="uid://cfx05kegeq64x" path="res://menus/title_screen_menu/title_screen_menu.tscn" id="3_x0lpr"]
+
+[node name="MainMenuApp" type="Node"]
+script = ExtResource("1_a8pey")
+
+[node name="SettingsMenu" parent="." instance=ExtResource("2_7f6ov")]
+
+[node name="TitleScreenMenu" parent="." instance=ExtResource("3_x0lpr")]

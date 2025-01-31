@@ -12,18 +12,22 @@ var _state: State = State.NONE:
 			return;
 		_state = value;
 		
+		pause_blur.visible = false;
 		pause_menu.hide();
 		settings_menu.hide();
 		match _state:
 				State.PAUSE_SCREEN:
+					pause_blur.visible = true;
 					pause_menu.show();
 				State.SETTINGS:
+					pause_blur.visible = true;
 					settings_menu.show();
 
 var _pause_menu_data: PauseMenuData;
 
 
 ## onready Variables
+@onready var pause_blur: Control = $PauseBlurControl;
 @onready var pause_menu: PauseMenu = $PauseMenu;
 @onready var settings_menu: SettingsMenu = $SettingsMenu;
 

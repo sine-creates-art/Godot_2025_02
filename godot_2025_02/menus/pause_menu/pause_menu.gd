@@ -7,10 +7,10 @@ var _pause_menu_data: PauseMenuData;
 
 ## onready Variables
 @onready var control: Control = $Control;
-@onready var resume_button: Button = $Control/PauseMenuButtons/Resume;
-@onready var save_button: Button = $Control/PauseMenuButtons/Save;
-@onready var settings_button: Button = $Control/PauseMenuButtons/Settings;
-@onready var main_menu_button: Button = $Control/PauseMenuButtons/MainMenu;
+@onready var resume_button: Button = $Control/Panel/PauseMenuButtons/Resume;
+@onready var save_button: Button = $Control/Panel/PauseMenuButtons/Save;
+@onready var settings_button: Button = $Control/Panel/PauseMenuButtons/Settings;
+@onready var main_menu_button: Button = $Control/Panel/PauseMenuButtons/MainMenu;
 
 
 ## Built-In Virtual Methods

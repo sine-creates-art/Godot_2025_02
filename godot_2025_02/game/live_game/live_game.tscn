@@ -1,11 +1,25 @@
-[gd_scene load_steps=3 format=3 uid="uid://dl5t66yfvgdl"]
+[gd_scene load_steps=4 format=3 uid="uid://dl5t66yfvgdl"]
 
 [ext_resource type="Script" path="res://game/live_game/live_game.gd" id="1_i1dlk"]
 [ext_resource type="PackedScene" uid="uid://l8vwufrxgsr8" path="res://__messing_around/time_go_brr.tscn" id="2_r043y"]
+[ext_resource type="Texture2D" uid="uid://dtc77qss06ych" path="res://assets/images/Screen_Computer__Informant_Computer__Notebook_Desk.png" id="3_g4jfu"]
 
 [node name="LiveGame" type="Node"]
 process_mode = 1
 script = ExtResource("1_i1dlk")
+
+[node name="Image" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="Image"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_g4jfu")
 
 [node name="TimeGoBrr" parent="." instance=ExtResource("2_r043y")]
 mouse_filter = 2

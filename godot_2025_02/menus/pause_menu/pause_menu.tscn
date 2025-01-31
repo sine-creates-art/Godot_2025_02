@@ -16,32 +16,46 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("2_2t8gf")
 
-[node name="PauseMenuButtons" type="VBoxContainer" parent="Control"]
+[node name="Panel" type="Panel" parent="Control"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
+offset_left = -425.0
+offset_top = -425.0
+offset_right = 425.0
+offset_bottom = 425.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Resume" parent="Control/PauseMenuButtons" instance=ExtResource("3_a5i24")]
+[node name="PauseMenuButtons" type="VBoxContainer" parent="Control/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -99.0
+offset_top = -112.0
+offset_right = 99.0
+offset_bottom = 112.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Resume" parent="Control/Panel/PauseMenuButtons" instance=ExtResource("3_a5i24")]
 layout_mode = 2
 text = "RESUME"
 
-[node name="Save" parent="Control/PauseMenuButtons" instance=ExtResource("3_a5i24")]
+[node name="Save" parent="Control/Panel/PauseMenuButtons" instance=ExtResource("3_a5i24")]
 layout_mode = 2
 text = "SAVE"
 
-[node name="Settings" parent="Control/PauseMenuButtons" instance=ExtResource("3_a5i24")]
+[node name="Settings" parent="Control/Panel/PauseMenuButtons" instance=ExtResource("3_a5i24")]
 layout_mode = 2
 text = "SETTINGS"
 
-[node name="MainMenu" parent="Control/PauseMenuButtons" instance=ExtResource("3_a5i24")]
+[node name="MainMenu" parent="Control/Panel/PauseMenuButtons" instance=ExtResource("3_a5i24")]
 layout_mode = 2
 text = "MAIN MENU"
